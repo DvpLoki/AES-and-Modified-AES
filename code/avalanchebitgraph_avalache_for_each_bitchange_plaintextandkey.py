@@ -130,7 +130,7 @@ def avalplain(key,plaintext):
         ccipherbits=convert_to_bits(chcipher)
         count=0
         for i in range(128):
-            if ccipherbits[i]==cipherbits[i]:
+            if ccipherbits[i]!=cipherbits[i]:
                 count+=1
         avalbits.append(count)
         avalcipher.append(bin2hex(ccipherbits))
@@ -162,7 +162,7 @@ def avalkey(key,plaintext):
         ccipherbits=convert_to_bits(chcipher)
         count=0
         for i in range(128):
-            if ccipherbits[i]==cipherbits[i]:
+            if ccipherbits[i]!=cipherbits[i]:
                 count+=1
         avalbits.append(count)
         avalcipher.append(bin2hex(ccipherbits))
