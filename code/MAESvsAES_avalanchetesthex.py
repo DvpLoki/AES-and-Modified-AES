@@ -125,7 +125,7 @@ def mavalplain(key,plaintext):
     cipherhex=bin2hex(cipherbits)
     count=0
     for i in range(128):
-        if chcipherbits[i]==cipherbits[i]:
+        if chcipherbits[i]!=cipherbits[i]:
             count+=1
     return count,chplainhex,chcipherhex,cipherhex 
 
@@ -147,7 +147,7 @@ def mavalkey(key,plaintext):
     cipherhex=bin2hex(cipherbits)
     count=0
     for i in range(128):
-        if chcipherbits[i]==cipherbits[i]:
+        if chcipherbits[i]!=cipherbits[i]:
             count+=1
     return count,chkeyhex,chcipherhex,cipherhex 
 
@@ -168,7 +168,7 @@ def oavalplain(key,plaintext):
     cipherhex=bin2hex(cipherbits)
     count=0
     for i in range(128):
-        if chcipherbits[i]==cipherbits[i]:
+        if chcipherbits[i]!=cipherbits[i]:
             count+=1
     return count,chplainhex,chcipherhex,cipherhex 
 
@@ -190,7 +190,7 @@ def oavalkey(key,plaintext):
     cipherhex=bin2hex(cipherbits)
     count=0
     for i in range(128):
-        if chcipherbits[i]==cipherbits[i]:
+        if chcipherbits[i]!=cipherbits[i]:
             count+=1
     return count,chkeyhex,chcipherhex,cipherhex 
 
